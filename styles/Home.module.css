@@ -114,3 +114,16 @@
     flex-direction: column;
   }
 }
+
+.dynamicBox {
+  border: 1px solid blue;
+}
+
+.dynamicLink {
+  padding: 15px;
+
+}
+
+.dynamicLink:hover {
+  color: peru;
+}

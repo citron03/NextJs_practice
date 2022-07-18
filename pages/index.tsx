@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import Link from 'next/link'
 
 const Home: NextPage = () => {
   return (
@@ -13,6 +14,17 @@ const Home: NextPage = () => {
       <main className={styles.main}>
         <h2>넥스트 JS 실행 확인</h2>
         <a href='/about'>About 페이지 이동</a>
+        <div className={styles.dynamicBox}>
+          <Link href="/dynamic/1" as="/dynamic/1">
+            <a className={styles.dynamicLink}>동적 라우팅 1번</a>
+          </Link>   
+          <Link href="/dynamic/2" as="/dynamic/2">
+            <a className={styles.dynamicLink}>동적 라우팅 2번</a>
+          </Link>            
+          <Link href="/dynamic/3" as="/dynamic/3">
+            <a className={styles.dynamicLink}>동적 라우팅 3번</a>
+          </Link>                      
+        </div>
       </main>
       <footer className={styles.footer}>
         Footer

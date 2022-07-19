@@ -1,7 +1,7 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
-import DynamicRoutingLink from '../components/DynamicRoutingLink'
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import styles from '../styles/Home.module.css';
+import { DynamicRoutingLink, ImageCloud } from "./../components";
 
 const pageNum = [1, 2, 3, 123, 44, 6, 1235];
 
@@ -15,6 +15,7 @@ const Home: NextPage = () => {
       </Head>
       <main className={styles.main}>
         <h2>넥스트 JS 실행 확인</h2>
+        <ImageCloud/>
         <a href='/about'>About 페이지 이동</a>
         <div className={styles.dynamicBox}>
           {pageNum.map(el => <DynamicRoutingLink key={el} page={ el } />) }

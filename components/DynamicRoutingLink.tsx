@@ -9,9 +9,9 @@ interface DynamicRoutingLinkProps {
 const DynamicRoutingLink: React.FC<DynamicRoutingLinkProps> = ({ page }) => {
     const rink = `/dynamic/${page}`
   return (
-    <div>
+    <div className={styles.dynamicLink}>
           <Link href={ rink } as={ rink }>
-              <a className={styles.dynamicLink}>동적 라우팅 { page }번</a>
+              <a>동적 라우팅 { page }번</a>
         </Link>
     </div>
   );
